@@ -1,0 +1,155 @@
+/* Section TEAM */
+.team {
+  width: 1201px;
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 80px;
+
+  &__title {
+    @include font($suplemented-font, 24px, 400, 1.15);
+    text-align: center;
+    color: $team-color;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @include font($main-font, 30px, 700, 1.15);
+    text-align: center;
+    text-transform: uppercase;
+    color: $team-color;
+    margin-bottom: 62px;
+
+    &::after {
+      @include pseudo();
+      width: 60px;
+      height: 3px;
+      background-color: $team-hover-color;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+
+  &__list {
+    @include flex($justifyContent: space-around);
+    flex: 0 0 381px;
+  }
+
+  &__text {
+    @include font($secondary-font, 15px, 400, 1.6);
+    color: $team-text-color;
+    text-align: center;
+    margin-bottom: 94px;
+  }
+
+  &__list-text {
+    text-align: center;
+    color: $team-text-color;
+    @include font($secondary-font, 15px, 300, 1.6);
+  }
+
+  &__list-title {
+    color: $team-color;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 46px;
+  }
+
+  &__list-item {
+    position: relative;
+
+    &:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-10px, -10px);
+      transition: all 200ms linear;
+    }
+  }
+
+  &__list-title {
+    @include font($main-font, 14px, 400, 1.15);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 470px;
+  background-image: linear-gradient(0deg,
+      rgba(252, 227, 138, 0.6) 0%,
+      rgba(243, 129, 129, 0.6) 100%);
+  box-shadow: 10px 10px #95e1d3;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay-list {
+  @include center-flex();
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  &__item {
+    @include center-flex();
+    width: 56px;
+    height: 56px;
+    border: none;
+  }
+
+  &__link {
+    @include center-flex();
+    border: 1px solid $team-border-color;
+    width: 100%;
+    height: 100%;
+    background-color: $team-bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 200ms linear;
+
+    &:hover {
+      background-color: $team-hover-color;
+      border: none;
+    }
+
+    &:hover &-svg {
+      fill: $main-color;
+    }
+  }
+
+  .overlay-list__link {
+    @include center-flex();
+    border: 1px solid $team-border-color;
+    width: 100%;
+    height: 100%;
+    background-color: $team-bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 200ms linear;
+
+    &:hover {
+      background-color: $team-hover-color;
+      border: none;
+    }
+
+    &:hover &-svg {
+      fill: $main-color;
+    }
+  }
+
+  &__link-svg {
+    width: 50%;
+    height: 50%;
+    fill: $team-hover-color;
+    transition: fill 200ms linear;
+  }
+}
