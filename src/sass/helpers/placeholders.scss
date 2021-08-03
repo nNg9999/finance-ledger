@@ -30,3 +30,27 @@
 %pseudo-after {
   content: '\005D';
 }
+
+%social-icons {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%buttom-header {
+  display: block;
+  border-radius: 5px;
+  border-color: $secondary-bg-color;
+  border: none;
+  color: $main-color;
+  background: $secondary-bg-color;
+}
+
+%buttom-footer {
+  border: none;
+  background-color: $footer-bg-color;
+  color: $main-color;
+  outline: 0;
+}

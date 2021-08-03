@@ -1,0 +1,121 @@
+.contact {
+
+  background: $contact-bg-color;
+
+  @media (min-width: 768px) {
+    @include center-flex();
+  }
+
+  img {
+    @media (min-width: 768px) {
+      display: block;
+      width: 384px;
+      height: 349px;
+    }
+
+    @media (min-width: 1024px) {
+      display: block;
+      width: 680px;
+      height: 460px;
+    }
+  }
+
+  &__title {
+    @include font-set($main-font, 38px, 300, 48px);
+    color: $contact-font-color;
+    margin-bottom: 34px;
+    padding: 26px 143px 0px 30px;
+
+    @media (min-width: 768px) {
+      padding-right: 49px;
+
+    }
+  }
+
+  &__list {
+    padding: 0px 30px 0px 30px;
+  }
+
+  label {
+    color: blue;
+    display: block;
+  }
+
+  input:focus {
+    display: none;
+  }
+
+  &__form {}
+
+  &__form-input {
+    @include font-set($main-font, 16px, 400, 23.04px);
+    width: 260px;
+    height: 40px;
+    color: $contact-font-color;
+    padding-left: 18px;
+    // background-color: $main-bg-color;
+    // border-width: 0.833px;
+    // border-color: rgb(82, 82, 82);
+    border: none;
+
+    @media (min-width: 768px) {
+      width: 324px;
+      @include font-set($main-font, 18px, 400, 25px);
+    }
+
+    @media (min-width: 1360px) {
+      width: 620px;
+
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:required:focus:valid {
+      outline: 3px solid green;
+    }
+
+    &:required:focus:invalid {
+      outline: 3px solid red;
+    }
+
+  }
+
+  &__list-item {
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 53px;
+    }
+  }
+
+  &-wrapper {
+    @media (min-width: 768px) {
+      width: 384px;
+      height: 349px;
+    }
+  }
+}
+
+
+.form__btn {
+  @extend %button;
+  @include font-set($main-font, 16px, 400, 21.79px);
+  width: 260px;
+  height: 43px;
+  color: $main-color;
+  border-radius: 5px;
+  background-color: $btn-color;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    width: 324px;
+    @include font-set($main-font, 18px, 400, 25px);
+  }
+
+  @media (min-width: 1360px) {
+    width: 620px;
+  }
+}

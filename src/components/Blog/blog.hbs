@@ -1,0 +1,40 @@
+{{! <picture>
+  <source media='(max-width: 768)' srcset='./images/blog/blog.jpg 700w' />
+  <source media='(min-width: 769px)' srcset='./images/blog/blog.webp 700w' />
+  <source
+    media='(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
+    srcset='./images/blog/blog@x2.jpg 1400w'
+  />
+  <source
+    media='(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
+    srcset='./images/blog/blog@x2.webp 1400w'
+  />
+
+  <img
+    class='blog__img'
+    src='./images/blog/blog.jpg'
+    alt='blog_img'
+    sizes='700px'
+    height='525'
+  />
+</picture> }}
+<img
+  class='blog__img'
+  srcset='./images/blog/blog.jpg 700w, ./images/blog/blog.webp 700w, ./images/blog/blog@x2.jpg 1400w,
+./images/blog/blog@x2.webp 1400w'
+  type='image/webp'
+  sizes='700px'
+  alt='blog_img'
+  src='./images/blog/blog.jpg'
+  height='525'
+/>
+<div class='blog-container'>
+  <p class='blog__text'>April 16 2020</p>
+  <h2 class='blog__title'>Blog Post One</h2>
+  <h3 class='blog__subtitle'>Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam aliquid
+    impedit harum illum dolore explicabo ab dolores itaque rerum temporibus
+    doloribus iste maiores deleniti?</h3><button
+    class='blog__button fas fa-angle-right'
+  >Read Our Blog</button>
+</div>

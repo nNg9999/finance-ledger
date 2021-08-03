@@ -1,0 +1,121 @@
+.blog {
+
+  &__img {}
+
+  &__title {
+    @include font-set($main-font, 38px, 300, 48px);
+    color: $blog-font-color;
+    margin: 0px 0px 25px 0px;
+  }
+
+  &__subtitle {
+    @include font-set($main-font, 16px, 400, 25.6px);
+    color: $blog-font-color;
+    margin: 0px 0px 14px 0px;
+
+  }
+
+  &__text {
+    @include font-set($main-font, 18px, 400, 29.95px);
+    color: $blog-font-color;
+    padding-top: 30px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  &-container {
+    padding: 0px 30px 30px 30px;
+    background-color: $blog-bg-color;
+  }
+
+  &__button {
+    display: block;
+    width: 156px;
+    height: 45px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: $blog-font-color;
+    border: 1px solid $blog-font-color;
+    background: $blog-bg-color;
+    @include font-set($main-font, 16px, 400, 26px);
+
+    &:hover,
+    &:focus {
+      background: $main-bg-color;
+      color: $blog-bg-color;
+      opacity: 1;
+      transition: all 200ms linear;
+    }
+  }
+}
+
+.fa-angle-right:before {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .blog {
+    width: 768px;
+    @include space-between-flex('all');
+    flex-direction: row-reverse;
+
+    &-container {
+      width: 384px;
+    }
+
+    &__img {
+      width: 384px;
+      height: 460px;
+    }
+
+    &__subtitle {
+      @include font-set($main-font, 18px, 400, 28px);
+      padding-right: 9px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__title {
+      @include font-set($main-font, 38px, 300, 48px);
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      @include font-set($main-font, 20px, 400, 32.95px);
+    }
+
+    &__button {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .blog {
+    width: 1360px;
+    margin: 0 auto;
+
+    &-container {
+      width: 680px;
+      height: 517px;
+      padding: 112px 30px 113px 30px;
+    }
+
+    &__img {
+      width: 680px;
+      height: 517px;
+    }
+
+    &__subtitle {
+      @include font-set($main-font, 18px, 400, 28px);
+      padding-right: 14px;
+      margin: 0px 0px 17px 0px;
+    }
+
+    &__button {
+      @include font-set($main-font, 18px, 400, 28px);
+    }
+
+  }
+}

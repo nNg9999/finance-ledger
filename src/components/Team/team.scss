@@ -1,0 +1,140 @@
+/* Section team */
+
+.team {
+
+  &__title {
+    @include font-set($main-font, 38px, 300, 48px);
+    text-align: center;
+    color: $team-color;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    @include font-set($main-font, 18px, 400, 29.95px);
+    text-align: center;
+    color: $team-color;
+    margin-bottom: 15px;
+    padding-top: 50px;
+  }
+
+  &__text {
+    @include font-set($main-font, 16px, 400, 25.6px);
+    color: $team-text-color;
+    text-align: center;
+    margin-bottom: 37px;
+    padding: 0px 36px 0px 36px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat minmax(320px, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__list-name {
+    text-align: center;
+    color: $team-text-color;
+    @include font-set($main-font, 23px, 400, 28.8px);
+    margin-bottom: 11px;
+  }
+
+  &__list-occupation {
+    text-align: center;
+    color: $team-text-color;
+    @include font-set($main-font, 16px, 400, 25.6px);
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  &__list-item {
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.4);
+      transform: scale(1.02);
+      transition: all 200ms linear;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .team {
+    width: 768px;
+
+    // &-container {
+    //   margin: 0 auto;
+    // }
+
+    &__list {
+      grid-template-columns: 223px 223px 223px;
+      grid-gap: 20px;
+    }
+
+    &__img {
+      width: 223px;
+      height: 148px;
+    }
+
+    &__item:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      @include font-set($main-font, 20px, 400, 32.95px)
+    }
+
+    &__title {
+      @include font-set($main-font, 38px, 400, 48px);
+      bottom: 20px;
+    }
+
+    &__text {
+      @include font-set($main-font, 17px, 400, 28.16px);
+      bottom: 20px;
+    }
+
+    &__list-name {
+      @include font-set($main-font, 25px, 400, 31.8px);
+    }
+
+    &__list-occupation {
+      @include font-set($main-font, 18px, 400, 28.16px);
+    }
+
+    &__list-item {
+      &:last-child {
+        margin-bottom: 59px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .team {
+    width: 1360px;
+
+    &__list {
+      grid-template-columns: 420px 420px 420px;
+    }
+
+    &__img {
+      width: 420px;
+      height: 280px;
+    }
+
+    &__item:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 26px;
+    }
+  }
+}

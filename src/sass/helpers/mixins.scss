@@ -1,4 +1,88 @@
-@mixin font-set($font-size, $line-height) {
-    font-size: $font-size;
-    line-height: $line-height;
+@mixin font-set($font, $font-size, $font-weight, $line-height) {
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
 }
+
+@mixin center-flex ($type:'all') {
+  display: flex;
+
+  @if $type=='all' {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @else if $type=='hor' {
+    justify-content: center;
+  }
+
+  @else if $type=='ver' {
+    align-items: center;
+  }
+}
+
+@mixin space-between-flex ($type:'all') {
+  display: flex;
+  justify-content: space-between;
+
+  @if $type=='all' {
+    align-items: center;
+  }
+
+  @else if $type=='flex-start' {
+    align-items: flex-start;
+  }
+
+  @else if $type=='flex-end' {
+    align-items: flex-end;
+  }
+}
+
+@mixin pseudo($display: block, $content:'') {
+  display: $display;
+  content: $content;
+}
+
+@mixin gradient-bg-image($path:'', $bg-size: cover, $repeat: no-repeat, $pos: center center) {
+  background-image: $linear-gradient, url($path);
+  background-size: $bg-size;
+  background-repeat: $repeat;
+  background-position: $pos;
+}
+
+@mixin flex($display: flex, $flex-wrap: wrap, $justify-content: space-between, $align-items: center) {
+  display: $display;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin icons($display: flex, $flex-wrap: wrap, $justify-content: center, $align-items: center, $width: 50px, $height: 50px) {
+  display: $display;
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+
+// %icon{
+//   display: inline-block;
+//   width: 4em;
+//   height: 4em;
+// }
+
+// $icons: facebook, linkedin, twitter ;
+
+// @mixin generate-icons ($baseclass, $list, $path, $ext) {
+//   @each $icon in $list {
+//     .#($baseclass)#($icon){@extend %icon; background-image: url(#($path)#($icon).#($ext));
+
+//     }
+
+//   }
+// }
+// @include generate-icons('icon-',$icons ,'../url/image/social-icons/','png' )

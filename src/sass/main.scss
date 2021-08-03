@@ -1,10 +1,23 @@
 /*
- * Все паршалы импортировать в этот файл
+ * Import all parshals into this file
  */
 
-@import 'normalize.scss';
-@import 'helpers/variables.scss';
-@import 'helpers/placeholders.scss';
-@import 'helpers/mixins.scss';
-@import 'fonts.scss';
-@import 'base.scss';
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/placeholders.scss';
+
+@import './normalize.scss';
+@import './base.scss';
+@import '../../src/css/all.css';
+@import './fonts.scss';
+
+@import '../components/Header/header.scss';
+@import '../components/Home/home.scss';
+@import '../components/About/about.scss';
+@import '../components/Cases/cases.scss';
+@import '../components/Socials/socials.scss';
+@import '../components/Team/team.scss';
+@import '../components/Blog/blog.scss';
+@import '../components/Contact/contact.scss';
+@import '../components/Overlay/overlay.scss';
+@import '../components/Footer/footer.scss';

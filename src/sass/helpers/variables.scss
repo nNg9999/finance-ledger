@@ -1,8 +1,42 @@
-$main-font-stack: 'Roboto',
+$main-bg-color: rgba(234, 234, 234, 0.9);
+$secondary-bg-color: rgba(40, 167, 69, 1);
+$main-font-color: rgb(255, 255, 255);
+$secondary-font-color: rgb(255, 255, 255);
+$btn-color: rgba(40, 167, 69, 1);
+$main-color: rgb(233, 233, 233);
+
+$FontPathOpenSans: '../assets/fonts-OpenSans';
+$main-font: "Open Sans",
+sans-serif;
+$secondary-font: "Roboto Slab",
+serif;
+$suplemented-font: "Open Sans",
 sans-serif;
 
-$main-bg-color: rgb(119, 192, 186);
-$secondary-bg-color: rgb(173, 218, 214);
-$main-font-color: rgb(55, 44, 72);
-$secondary-font-color: rgba(55, 44, 72, 0.702);
-$btn-color: rgb(85, 98, 112);
+$secondary-color: rgba(40, 167, 69, 1);
+$about-bg-color:rgba(40, 167, 69, 1);
+$about-font-color:rgba(51, 51, 51, 1);
+$about-text-color: rgb(255, 255, 255);
+$about-border-color:rgb(255, 255, 255);
+
+
+$blog-bg-color: rgba(2, 132, 208, 1);
+$blog-font-color: rgb(255, 255, 255);
+
+$team-border-color:rgba(0, 0, 0, 0.4);
+$team-bg-color: rgba(0, 0, 0, 0.6);
+$team-hover-color: rgba(14, 211, 73, 0.8);
+$team-color:#333333;
+$team-text-color: rgba(51, 51, 51, 1);
+
+$contact-font-color: rgba(51, 51, 51, 1);
+$contact-bg-color: rgba(244, 244, 244, 1);
+
+
+
+$footer-font-color: rgb(255, 255, 255);
+$footer-hover-color: rgba(14, 211, 73, 0.8);
+$footer-bg-color: rgba(51, 51, 51, 1);
+
+
+$linear-gradient: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);

@@ -1,0 +1,210 @@
+.about {
+
+  &__list {
+    text-align: center;
+    color: $about-font-color;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 11px;
+
+    & span {
+      margin-bottom: 11px;
+    }
+
+    &-title {
+      @include font-set($main-font, 18px, 400, 29.95px);
+      margin-bottom: 15px;
+    }
+
+    &-subtitle {
+      @include font-set($main-font, 16px, 400, 25.6px);
+      margin-bottom: 18px;
+    }
+
+    &-item {
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__img {}
+
+  &__title {
+    @include font-set($main-font, 38px, 300, 48px);
+    color: $about-text-color;
+    margin: 0px 0px 25px 0px;
+    padding-right: 86px;
+  }
+
+  &__subtitle {
+    @include font-set($main-font, 16px, 400, 25.6px);
+    color: $about-text-color;
+    padding: 0px 0px 14px 0px;
+  }
+
+  &__text {
+    @include font-set($main-font, 18px, 400, 29.95px);
+    color: $about-text-color;
+    padding-top: 30px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  &-container {
+    padding: 0px 30px 30px 30px;
+    background-color: $about-bg-color;
+
+  }
+
+  &__button {
+    display: block;
+    width: 156px;
+    height: 45px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: $main-color;
+    border: 1px solid $main-color;
+    background: $secondary-bg-color;
+    @include font-set($main-font, 16px, 400, 26px);
+
+
+    &:hover,
+    &:focus {
+      background: $main-bg-color;
+      color: $about-bg-color;
+      opacity: 1;
+      transition: all 200ms linear;
+    }
+  }
+}
+
+.fa-angle-right:before {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .about {
+    width: 768px;
+
+    &__list {
+
+      &-title {
+        @include font-set($main-font, 20px, 400, 33px);
+      }
+
+      &-subtitle {
+        @include font-set($main-font, 18px, 400, 28px);
+      }
+
+      &-item {
+        padding: 0px 20px 0px 20px;
+      }
+    }
+
+    &-container {
+      width: 384px;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+      &__img {
+        width: 384px;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__subtitle {
+      @include font-set($main-font, 18px, 400, 28px);
+      padding-right: 10px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__title {
+      @include font-set($main-font, 38px, 300, 48px);
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      @include font-set($main-font, 20px, 400, 32.95px);
+    }
+
+    &__button {
+      @include font-set($main-font, 18px, 400, 28px);
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .about {
+    width: 1360px;
+    margin: 0 auto;
+    background: $contact-bg-color;
+    padding-top: 20px;
+
+    &-container {
+      width: 680px;
+      height: 517px;
+      padding: 112px 30px 113px 30px;
+    }
+
+    &__img {
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-wrapper {
+
+      &__img {
+        width: 680px;
+        height: auto;
+
+      }
+    }
+
+    &__subtitle {
+      @include font-set($main-font, 18px, 400, 28px);
+      padding-right: 14px;
+      margin: 0px 0px 17px 0px;
+    }
+
+    &__list {
+
+      &-item {
+        padding: 0px 40px 0px 40px;
+      }
+    }
+  }
+}
+
+.fa-university::before,
+.fa-book-reader::before,
+.fa-pencil-alt::before {
+  @include icons($width: 67px, $height: 67px);
+  color: $main-color;
+  background: $secondary-bg-color;
+}

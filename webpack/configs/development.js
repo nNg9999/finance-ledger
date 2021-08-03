@@ -1,15 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('../utils/paths');
 
-let htmlPageNames = ['about_it', 'career', 'footer', 'header'];
-let multipleHtmlPlugins = htmlPageNames.map(name => {
-  return new HtmlWebpackPlugin({
-    template: `../../src/html/${name}.html`, // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
-    chunks: [`${name}`] // respective JS files
-  })
-});
-
 module.exports = env => ({
   devtool: 'cheap-eval-source-map',
   output: {
@@ -32,7 +23,7 @@ module.exports = env => ({
       template: './index.html',
       chunks: ['main']
     }),
-  ].concat(multipleHtmlPlugins),
+  ],
   devServer: {
     contentBase: paths.BUILD_DIR,
     publicPath: '',
@@ -43,6 +34,6 @@ module.exports = env => ({
     quiet: true,
     clientLogLevel: 'warning',
     stats: 'errors-only',
-    open: true,
+    // open: true,
   },
 });
