@@ -1,6 +1,11 @@
 /* Section team */
 
 .team {
+  margin: 0 auto;
+
+  &-container {
+    margin: 0 auto;
+  }
 
   &__title {
     @include font-set($main-font, 38px, 300, 48px);
@@ -72,9 +77,12 @@
   .team {
     width: 768px;
 
-    // &-container {
-    //   margin: 0 auto;
-    // }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     &__list {
       grid-template-columns: 223px 223px 223px;

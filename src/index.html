@@ -13,28 +13,50 @@
   </header>
 
   <main id="root">
-    <!-- <div class="container"> -->
-    <section class="section-home" id="js-home">
-    </section>
+    <div class="container">
+      <section class="section-home" id="js-home">
+      </section>
 
-    <section class="about" id="js-about">
-    </section>
+      <section class="about" id="js-about">
+      </section>
 
-    <section class="cases" id="js-cases">
-    </section>
+      <section class="cases" id="js-cases">
+      </section>
 
-    <section class="blog" id="js-blog">
-    </section>
+      <section class="blog" id="js-blog">
+      </section>
 
-    <section class="team" id="js-team">
-    </section>
+      <section class="team" id="js-team">
+      </section>
 
-    <section class="contact" id="js-contact">
-    </section>
+      <section class="contact" id="js-contact">
+        <div class="contact-container">
+          <img class='contact__img' srcset='./images/contact/contact.jpg 700w, ./images/contact/contact@2x.jpg 1400w'
+            sizes='700px' alt='contact_img' src='./images/contact/contact.jpg' height='466' />
+          <div class='contact__wrapper'>
+            <h2 class='contact__title'>Request Callback</h2>
+            <form action='#' class='contact__form' name='contact' method='POST' data-netlify='true' id='js-form'>
+              <ul class='contact__list'>
+                <li class='contact__list-item'>
+                  <label for='name' class='contact__label invisible name'>Enter your name</label>
+                  <input type='text' class='contact__form-input field' id="name" placeholder='Enter your name'
+                    name='name' required='' />
+                </li>
+                <li class='contact__list-item'>
+                  <label for='email' class='contact__label invisible email'>Enter email*</label>
+                  <input type='email' class='contact__form-input field' id="email" placeholder='Enter email*'
+                    name='email' required='' />
+                </li>
+                <li class='contact__list-item'>
+                  <button type='submit' class='form__btn'>Send </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
 
-    <section class="home" id="home">
-    </section>
-    <!-- </div> -->
+      </section>
+    </div>
   </main>
 
   <footer class="footer" id="js-footer">

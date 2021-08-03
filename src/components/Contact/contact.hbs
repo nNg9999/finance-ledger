@@ -1,45 +1,47 @@
-<img
-  class='contact__img'
-  srcset='./images/contact/contact.jpg 700w, ./images/contact/contact@x2.jpg 1400w'
-  sizes='700px'
-  alt='contact_img'
-  src='./images/contact/contact.jpg'
-  height='466'
-/>
-<div class='contact__wrapper'>
-  <h2 class='contact__title'>Request Callback</h2>
-  <form
-    action='#'
-    class='contact__form'
-    name='contact'
-    method='POST'
-    data-netlify='true'
-    id='js-form'
-  >
-    <ul class='contact__list'>
-      <li class='contact__list-item'>
-        <label for='name' class='contact__label'>Enter your name</label>
-        <input
-          type='text'
-          class='contact__form-input'
-          placeholder='Enter your name'
-          name='name'
-          required=''
-        />
+<div class='contact-container'>
+  <img
+    class='contact__img'
+    srcset='./images/contact/contact.jpg 700w, ./images/contact/contact@2x.jpg 1400w'
+    sizes='700px'
+    alt='contact_img'
+    src='./images/contact/contact.jpg'
+    height='466'
+    id='dogPictures'
+  />
+  <div class='contact__wrapper'>
+    <h2 class='contact__title'>Request Callback</h2>
+    <form
+      action='#'
+      class='contact__form'
+      name='contact'
+      method='POST'
+      data-netlify='true'
+      id='js-form'
+    >
+      <ul class='contact__list'>
+        <li class='contact__list-item'>
+          <label for='name' class='contact__label'>Enter your name</label>
+          <input
+            type='text'
+            class='contact__form-input'
+            placeholder='Enter your name'
+            name='name'
+            required=''
+          />
 
-      </li>
-      <li class='contact__list-item'>
-        <label for='email' class='contact__label'>Enter email*</label>
-        <input
-          type='email'
-          class='contact__form-input'
-          placeholder='Enter email*'
-          name='email'
-          required=''
-          autocomplete='email'
-        />
-      </li>
-    </ul>
-    <button type='submit' class='form__btn'>Send</button>
-  </form>
+        </li>
+        <li class='contact__list-item'>
+          <label for='email' class='contact__label'>Enter email*</label>
+          <input
+            type='email'
+            class='contact__form-input'
+            placeholder='Enter email*'
+            name='email'
+            required=''
+          />
+        </li>
+      </ul>
+      <button type='submit' class='form__btn'>Send</button>
+    </form>
+  </div>
 </div>

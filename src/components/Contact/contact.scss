@@ -1,22 +1,42 @@
 .contact {
+  margin: 0 auto;
 
   background-color: $contact-bg-color;
 
   @media (min-width: 768px) {
+    width: 768px;
     @include center-flex();
   }
 
-  img {
+  @media (min-width: 1360px) {
+    width: 1360px;
+  }
+
+  &__img {
+    object-fit: cover;
+
     @media (min-width: 768px) {
-      display: block;
       width: 384px;
-      height: 349px;
+      min-height: 349px;
     }
 
     @media (min-width: 1024px) {
-      display: block;
       width: 680px;
-      height: 460px;
+      min-height: 460px;
+    }
+  }
+
+  &-container {
+    @media (min-width: 768px) {
+      width: 768px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    @media (min-width: 1360px) {
+      width: 1360px;
     }
   }
 
@@ -32,7 +52,7 @@
   }
 
   &__list {
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 10px 30px;
   }
 
   &__label {
@@ -111,4 +131,8 @@
   @media (min-width: 1360px) {
     width: 620px;
   }
+}
+
+.invisible {
+  display: none;
 }
