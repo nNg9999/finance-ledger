@@ -11,51 +11,35 @@
   <form
     action='#'
     class='contact__form'
-    name='form'
+    name='contact'
     method='POST'
     data-netlify='true'
     id='js-form'
   >
     <ul class='contact__list'>
       <li class='contact__list-item'>
-        <label for='name' class='contact__label'>Enter your name
-          <input
-            type='text'
-            class='contact__form-input'
-            placeholder='Enter your name'
-            name='name'
-            required=''
-          />
-        </label>
+        <label for='name' class='contact__label'>Enter your name</label>
+        <input
+          type='text'
+          class='contact__form-input'
+          placeholder='Enter your name'
+          name='name'
+          required=''
+        />
+
       </li>
       <li class='contact__list-item'>
-        <label for='email' class='contact__label'>Enter email*
-          <input
-            type='email'
-            class='contact__form-input'
-            placeholder='Enter email*'
-            name='email'
-            required=''
-            {{! autocomplete='email' }}
-          />
-        </label>
+        <label for='email' class='contact__label'>Enter email*</label>
+        <input
+          type='email'
+          class='contact__form-input'
+          placeholder='Enter email*'
+          name='email'
+          required=''
+          autocomplete='email'
+        />
       </li>
     </ul>
     <button type='submit' class='form__btn'>Send</button>
   </form>
-
-  {{! <form name='contact' method='POST' data-netlify='true'>
-    <p>
-      <label>Your Name: <input type='text' name='name' /></label>
-    </p>
-    <p>
-      <label>Your Email: <input type='email' name='email' /></label>
-    </p>
-    <p>
-      <label>Message: <textarea name='message'></textarea></label>
-    </p>
-    <p>
-      <button type='submit'>Send</button>
-    </p>
-  </form> }}
 </div>

@@ -1,6 +1,6 @@
 .contact {
 
-  background: $contact-bg-color;
+  background-color: $contact-bg-color;
 
   @media (min-width: 768px) {
     @include center-flex();
@@ -28,7 +28,6 @@
 
     @media (min-width: 768px) {
       padding-right: 49px;
-
     }
   }
 
@@ -36,13 +35,11 @@
     padding: 0px 30px 0px 30px;
   }
 
-  label {
-    color: blue;
+  &__label {
+    @include font-set($main-font, 16px, 400, 23.04px);
+    color: $contact-font-color;
     display: block;
-  }
 
-  input:focus {
-    display: none;
   }
 
   &__form {}
@@ -52,10 +49,7 @@
     width: 260px;
     height: 40px;
     color: $contact-font-color;
-    padding-left: 18px;
-    // background-color: $main-bg-color;
-    // border-width: 0.833px;
-    // border-color: rgb(82, 82, 82);
+    padding-left: 5px;
     border: none;
 
     @media (min-width: 768px) {
@@ -65,7 +59,6 @@
 
     @media (min-width: 1360px) {
       width: 620px;
-
     }
 
     &:focus {
@@ -73,11 +66,11 @@
     }
 
     &:required:focus:valid {
-      outline: 3px solid green;
+      // outline: 1px solid green;
     }
 
     &:required:focus:invalid {
-      outline: 3px solid red;
+      // outline: 1px solid red;
     }
 
   }
